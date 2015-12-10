@@ -123,6 +123,10 @@ class Proposal < ActiveRecord::Base
     self.tags.each{ |t| t.increment_custom_counter_for('Proposal') }
   end
 
+  def hello
+    return "hello"
+  end
+
   def self.search(terms)
     self.pg_search(terms)
   end
